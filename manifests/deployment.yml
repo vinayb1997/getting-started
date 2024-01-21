@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vinaybgettingstarted 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vinaybgettingstarted
+  template:
+    metadata:
+      labels:
+        app: vinaybgettingstarted 
+    spec:
+      containers:
+        - name: vinaybgettingstarted 
+          image: testingdevops1.azurecr.io/vinaybgettingstarted
+          ports:
+          - containerPort: 80
